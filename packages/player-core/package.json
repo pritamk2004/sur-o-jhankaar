@@ -1,7 +1,7 @@
 {
   "name": "@sur-o-jhankaar/player-core",
   "version": "1.0.0",
-  "description": "Pure player state machine, queue manipulation, and radio weighting algorithms",
+  "description": "Core audio state machine, queue manager, and weighted radio algorithm",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -9,9 +9,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@sur-o-jhankaar/shared-types": "*"
-  },
-  "devDependencies": {
+    "@sur-o-jhankaar/shared-types": "*",
     "typescript": "^5.6.3"
-  }
+  },
+  "devDependencies": {}
 }
