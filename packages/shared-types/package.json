@@ -2,12 +2,13 @@
   "name": "@sur-o-jhankaar/shared-types",
   "version": "1.0.0",
   "description": "Shared types and interfaces for Sur o Jhankaar platform",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./src/index.ts",
-      "default": "./src/index.ts"
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
     }
   },
   "scripts": {
