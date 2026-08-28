@@ -2,8 +2,14 @@
   "name": "@sur-o-jhankaar/player-core",
   "version": "1.0.0",
   "description": "Core audio state machine, queue manager, and weighted radio algorithm",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
   "scripts": {
     "build": "tsc",
     "typecheck": "tsc --noEmit"
