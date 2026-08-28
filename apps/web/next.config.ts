@@ -23,6 +23,15 @@ const nextConfig: NextConfig = {
   },
   eslint: {
     ignoreDuringBuilds: true
+  },
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...(config.resolve.alias || {}),
+      '@sur-o-jhankaar/shared-types': path.resolve(__dirname, '../../packages/shared-types/src/index.ts'),
+      '@sur-o-jhankaar/theme-engine': path.resolve(__dirname, '../../packages/theme-engine/src/index.ts'),
+      '@sur-o-jhankaar/player-core': path.resolve(__dirname, '../../packages/player-core/src/index.ts')
+    };
+    return config;
   }
 };
 

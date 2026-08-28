@@ -20,9 +20,9 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@sur-o-jhankaar/shared-types": ["../../packages/shared-types/src"],
-      "@sur-o-jhankaar/theme-engine": ["../../packages/theme-engine/src"],
-      "@sur-o-jhankaar/player-core": ["../../packages/player-core/src"]
+      "@sur-o-jhankaar/shared-types": ["../../packages/shared-types/src/index.ts"],
+      "@sur-o-jhankaar/theme-engine": ["../../packages/theme-engine/src/index.ts"],
+      "@sur-o-jhankaar/player-core": ["../../packages/player-core/src/index.ts"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
