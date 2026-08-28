@@ -1,0 +1,33 @@
+{
+  "name": "sur-o-jhankaar",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sur o Jhankaar — Har Sur Mein Ek Kahaani. Cinematic Indian Music & Storytelling Platform.",
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "server"
+  ],
+  "scripts": {
+    "dev:server": "npm --workspace=server run dev",
+    "dev:web": "npm --workspace=apps/web run dev",
+    "build": "npm run build:packages && npm --workspace=server run build",
+    "build:packages": "npm --workspace=packages/shared-types run build && npm --workspace=packages/theme-engine run build && npm --workspace=packages/player-core run build",
+    "seed:library": "npx tsx scripts/seed_master_library.ts",
+    "test": "npx tsx scripts/run_all_verifications.ts",
+    "test:phase12": "npx tsx scripts/verify_phase12.ts",
+    "lint": "npm --workspaces run lint",
+    "typecheck": "npm --workspaces run typecheck"
+  },
+  "keywords": [
+    "music",
+    "indian-music",
+    "bollywood",
+    "bengali",
+    "bhojpuri",
+    "radio",
+    "audio-stories"
+  ],
+  "author": "Google DeepMind / Sur o Jhankaar Team",
+  "license": "MIT"
+}

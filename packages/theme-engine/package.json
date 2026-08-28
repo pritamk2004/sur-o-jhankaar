@@ -1,0 +1,17 @@
+{
+  "name": "@sur-o-jhankaar/theme-engine",
+  "version": "1.0.0",
+  "description": "Dynamic playlist & song reactive theme engine for Sur o Jhankaar",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@sur-o-jhankaar/shared-types": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}

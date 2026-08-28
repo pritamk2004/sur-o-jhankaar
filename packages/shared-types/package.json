@@ -1,0 +1,17 @@
+{
+  "name": "@sur-o-jhankaar/shared-types",
+  "version": "1.0.0",
+  "description": "Shared types and interfaces for Sur o Jhankaar platform",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "sur-o-jhankaar": "file:../.."
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}

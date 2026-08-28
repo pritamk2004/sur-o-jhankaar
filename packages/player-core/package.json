@@ -1,0 +1,17 @@
+{
+  "name": "@sur-o-jhankaar/player-core",
+  "version": "1.0.0",
+  "description": "Pure player state machine, queue manipulation, and radio weighting algorithms",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@sur-o-jhankaar/shared-types": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}

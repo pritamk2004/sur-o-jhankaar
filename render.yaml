@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: sur-o-jhankaar-api
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm install && npm run build:packages && npm --workspace=server run build
+    startCommand: node server/dist/server.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false # Set to your MongoDB Atlas connection string in Render Dashboard
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_REFRESH_SECRET
+        generateValue: true
+      - key: ADMIN_DEFAULT_EMAIL
+        value: admin@surojhankaar.in
+      - key: ADMIN_DEFAULT_PASSWORD
+        value: AdminSur@2026

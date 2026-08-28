@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: sur-o-jhankaar
+  labels:
+    app.kubernetes.io/name: sur-o-jhankaar
+    app.kubernetes.io/part-of: sur-o-jhankaar
