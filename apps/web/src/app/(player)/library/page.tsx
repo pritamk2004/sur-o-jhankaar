@@ -1,15 +1,15 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { usePlayer } from '../../../context/PlayerContext';
 import { LocalLibraryService, LocalCustomPlaylist } from '../../../lib/indexedDb';
 import { Song } from '@sur-o-jhankaar/shared-types';
-import { Heart, History, ListMusic, Play, Plus, Trash2, Music } from 'lucide-react';
+import { Heart, History, Plus, Play, Music } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import { clsx } from 'clsx';
 
-export default function LibraryPage() {
+function LibraryContent() {
   const { playSong } = usePlayer();
   const searchParams = useSearchParams();
   const initialTab = searchParams.get('tab') || 'favorites';
@@ -173,5 +173,13 @@ export default function LibraryPage() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function LibraryPage() {
+  return (
+    <Suspense fallback={<div className="p-10 text-center text-zinc-400">Loading library...</div>}>
+      <LibraryContent />
+    </Suspense>
   );
 }

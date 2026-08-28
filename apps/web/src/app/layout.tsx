@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { ThemeProvider } from '../context/ThemeContext';
 import { PlayerProvider } from '../context/PlayerContext';
@@ -10,7 +10,10 @@ import { FullPlayerModal } from '../components/player/FullPlayerModal';
 export const metadata: Metadata = {
   title: 'Sur o Jhankaar — Har Sur Mein Ek Kahaani',
   description: 'A cinematic, nostalgic Indian music & storytelling platform. Ad-free, no-login, pure melody.',
-  manifest: '/manifest.json',
+  manifest: '/manifest.json'
+};
+
+export const viewport: Viewport = {
   themeColor: '#1A0409'
 };
 
